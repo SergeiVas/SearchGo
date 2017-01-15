@@ -22,9 +22,7 @@ func main() {
 		countAddres = readData(ch, AllUrl)
 	}()
 	for num := range ch {
-			go  func(){
-				 countStrings(num, countUrls)
-			}()
+			countStrings(num, countUrls)
 	}
 	count := 0
 	// Считываем количество строк go с каждого url'а
